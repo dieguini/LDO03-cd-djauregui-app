@@ -23,7 +23,7 @@ pipeline{
         }
         stage("Security Test Stage"){
             steps{
-                sh "./mvnw snyk:test"
+                sh "chmod +x ./mvnw && ./mvnw snyk:test"
             }
         }
     }
